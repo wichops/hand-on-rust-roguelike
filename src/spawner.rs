@@ -1,4 +1,4 @@
-pub use crate::prelude::*;
+use crate::prelude::*;
 
 pub fn spawn_player(ecs: &mut World, pos: Point) {
     ecs.push((
@@ -24,5 +24,6 @@ pub fn spawn_monster(ecs: &mut World, rng: &mut RandomNumberGenerator, pos: Poin
                 _ => to_cp437('g'),
             },
         },
+        MoveRandomly {},
     ));
 }
